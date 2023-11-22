@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  head
+  body
+    header 
+      h1.message-header= title
+    div.container   
+      form.new-message-form(method='POST', action='/new')
+        label(for='messageUser') Your Name:
+        input.text-field(type='text', id="messageUser", name='messageUser', placeholder='Your Name' required)
+        br
+        label(for='messageText') Your Message:
+        input.text-field(type='text', id="messageText", name='messageText', placeholder='Your message....' required)
+        br
+        div.form-btns
+          button.new-message-btn(type='submit') Submit
+          a.cancel-btn(href="/") Cancel
+          
+
+
